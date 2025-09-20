@@ -71,10 +71,11 @@ try:
     elif ansr==2:
         move_txt()
     else:
-        exit()
+        exit('why man')
 except ValueError:
-    exit()
+    exit('@#$%!&*?!')
 
 
 
 root.mainloop()
+
