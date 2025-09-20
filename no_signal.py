@@ -3,9 +3,15 @@ from tkinter import *
 import random
 
 WIDTH, HEIGHT = 900, 500
+
+
+print('Default=\'no signal\'')
+usrmsg=input('type any think : ')
+if usrmsg=='':
+    usrmsg='no signal'
+else:
+    usrmsg=usrmsg
 print('for normal mode : 1 , for crazy mode : 2')
-
-
 root = Tk()
 
 
@@ -13,7 +19,7 @@ colors = ["lime", "cyan", "magenta", "yellow", "orange", "deep pink", "red"]
 can = Canvas(root, width=WIDTH, height=HEIGHT, bg="black")
 can.pack()
 
-txt = can.create_text(110, 30, text='No signal',
+txt = can.create_text(WIDTH//2, HEIGHT//2, text=usrmsg,
                       fill='lime', font=('Consolas', 32, 'bold'))
 
 def move_txt2():
@@ -78,4 +84,3 @@ except ValueError:
 
 
 root.mainloop()
-
